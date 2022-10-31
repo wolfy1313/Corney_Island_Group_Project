@@ -16,6 +16,8 @@ app.use('/', routes)
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
+//TEST COMMENT//
+
 app.get('/*', (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`)
 })
