@@ -7,4 +7,6 @@ router.get('/', (req, res) => res.send('Corning up Coney'))
 
 router.post('/themes', controllers.createTheme)
 
+router.get('/themes', controllers.getAllThemes)
+
 module.exports = router
