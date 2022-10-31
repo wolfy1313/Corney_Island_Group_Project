@@ -5,7 +5,7 @@ const createTheme = async (req, res) => {
   try {
     const theme = await new Theme(req.body)
     await theme.save()
-    return res.status(201).json({ user })
+    return res.status(201).json({ theme })
   } catch (error) {
     return res.status(500).json({ error: error.message })
   }
