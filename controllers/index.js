@@ -18,8 +18,17 @@ const createTheme = async (req, res) => {
     return res.status(500).json({ error: error.message })
   }
 }
+const createAttraction = async (req, res) => {
+  try {
+    const attraction = await Attraction.create(req.body)
+    return res.status(201).json({ attraction })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
 
 module.exports = {
   getAllThemes,
-  createTheme
+  createTheme,
+  createAttraction
 }

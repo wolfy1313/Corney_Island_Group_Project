@@ -9,4 +9,6 @@ router.post('/themes', controllers.createTheme)
 
 router.get('/themes', controllers.getAllThemes)
 
+router.post('/attractions', controllers.createAttraction)
+
 module.exports = router
