@@ -5,4 +5,6 @@ const { db } = require('../db')
 
 router.get('/', (req, res) => res.send('Corning up Coney'))
 
+router.post('/themes', controllers.createTheme)
+
 module.exports = router
