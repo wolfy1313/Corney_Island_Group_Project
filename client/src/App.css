@@ -15,11 +15,18 @@ body {
 
 .header {
   background-color: #3e5251;
-  border: 3px solid #849897;
+  border-top: 3px solid #849897;
+  border-left: 3px solid #849897;
+  border-right: 3px solid #b0c4c5;
+  border-bottom: 3px solid #b0c4c5;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.nav {
+  border-bottom: 2px solid #b0c4c5;
 }
 
 .headerLink {
