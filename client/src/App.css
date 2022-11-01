@@ -108,19 +108,19 @@ body {
 
 /* ALL THEMES */
 
-.allThemes {
+.allThemes, .allAttractions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.themeImage {
+.themeImage, .attractionImage {
   width: 400px;
   border-bottom: 3px solid #b0c4c5;
 }
 
-.themeDiv {
+.themeDiv, .attractionDiv {
   background-color: #849897;
   margin: 20px 10px 0px 10px;
   border-top: 3px solid #849897;
@@ -129,14 +129,39 @@ body {
   border-bottom: 3px solid #b0c4c5;
 }
 
-.themeName {
+.themeName, .attractionName {
   margin: 0;
   border: 2px solid #849897;
   font-size: 20px;
   text-shadow: 2px 2px #071313;
 }
 
-.themeName:hover {
+.themeName:hover, .attractionName:hover  {
+  border-top: 2px solid #b0c4c5;
+  border-left: 2px solid #b0c4c5;
+  border-right: 2px solid #3e5251;
+  border-bottom: 2px solid #3e5251;
+}
+
+.addAttraction {
+  background-color: #849897;
+  border-right: 3px solid #b0c4c5;
+  border-bottom: 3px solid #b0c4c5;
+  border-top: 3px solid  #849897;
+  border-left: 3px solid  #849897;
+}
+
+.addAttractionName {
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px #071313;
+}
+
+.attractionHover {
+  border: 2px solid #849897;
+}
+
+.attractionHover:hover {
   border-top: 2px solid #b0c4c5;
   border-left: 2px solid #b0c4c5;
   border-right: 2px solid #3e5251;

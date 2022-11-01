@@ -25,7 +25,11 @@ const Attractions = () => {
 
   return (
     <div className="attractionGrid">
-      <Link to='/create-attraction'>Add Attraction</Link>
+      <div className="addAttraction">
+        <div className="attractionHover">
+      <Link to='/create-attraction' className="addAttractionName">Add Attraction</Link>
+      </div>
+      </div>
       <div className="allAttractions">
         {attractions
           .sort((a, b) => a.name.localeCompare(b.name))
