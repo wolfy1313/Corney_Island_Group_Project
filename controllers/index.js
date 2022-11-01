@@ -74,6 +74,16 @@ const getAllAttractions = async (req, res) => {
   }
 }
 
+const findAttractionByTheme = async (req, res) => {
+  try {
+    const { id } = req.params
+    const attractionByTheme = await Attraction.find({ theme: id })
+    return res.status(200).json(attractionByTheme)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const getAttractionById = async (req, res) => {
   try {
     const { id } = req.params
@@ -125,5 +135,6 @@ module.exports = {
   updateTheme,
   updateAttraction,
   deleteTheme,
-  deleteAttraction
+  deleteAttraction,
+  findAttractionByTheme
 }

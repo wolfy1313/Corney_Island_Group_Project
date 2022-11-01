@@ -13,6 +13,8 @@ router.post('/attractions', controllers.createAttraction)
 
 router.get('/attractions', controllers.getAllAttractions)
 
+router.get('/attractions/theme/:id', controllers.findAttractionByTheme)
+
 router.get('/attractions/:id', controllers.getAttractionById)
 
 router.get('/themes/:id', controllers.getThemeById)
