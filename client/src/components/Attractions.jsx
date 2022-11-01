@@ -34,6 +34,7 @@ const ViewAttractions = () => {
               key={attraction._id}
               image={attraction.image}
               name={attraction.name}
+              theme={attraction.theme}
               onClick={viewAttraction}
             />
           ))}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Theme from '../components/Theme'
 
 const AttractionInfo = () => {
   let { attractionId } = useParams()
@@ -38,7 +39,11 @@ const AttractionInfo = () => {
               alt={attractionInfo.name}
             ></img>
               <div className="attractionTheme">
-                {attractionInfo.theme}
+                {attractionInfo.theme.map((theme) => (
+                  <Theme 
+                  name={theme.name}
+                  />
+                ))}
               </div>
             <div className="attractionDescription">
               <h5>{attractionInfo.description}</h5>
