@@ -6,6 +6,7 @@ import AttractionInfo from './components/AttractionInfo'
 import Themes from './components/Themes'
 import Home from './components/Home'
 import ThemeAttractions from './components/ThemeAttractions'
+import AddAttraction from './components/AddAttraction'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             path="/attractions/:attractionId"
             element={<AttractionInfo />}
           />
+          <Route path="/create-attraction" element={<AddAttraction />}></Route>
         </Routes>
       </main>
     </div>

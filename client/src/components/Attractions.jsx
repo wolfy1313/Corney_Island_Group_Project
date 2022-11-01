@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Attraction from '../components/Attraction'
 
@@ -25,6 +25,7 @@ const Attractions = () => {
 
   return (
     <div className="attractionGrid">
+      <Link to='/create-attraction'>Add Attraction</Link>
       <div className="allAttractions">
         {attractions
           .sort((a, b) => a.name.localeCompare(b.name))
