@@ -5,13 +5,10 @@ body {
   color: white;
   font-size: 20px;
   font-family: 'VT323', monospace;
+  letter-spacing: 1.5px;
 }
 
-.home {
-  background-image: url("https://i.imgur.com/GIysuBd.png");
-  background-size: cover;
-  height: 100vh;
-}
+/* HEADER */
 
 .header {
   background-color: #3e5251;
@@ -36,8 +33,75 @@ body {
   padding: 10px;
 }
 
+/* HOME */
+
+.home {
+  background-image: url("https://i.imgur.com/GIysuBd.png");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .homeName {
-  height: 25vh;
-  margin: 50px 0 0 0;
+  height: 24vh;
+  margin: 5vh 0 50px 0;
+}
+
+.homeLinks {
+  display: flex;
+  flex-direction: column;
+  background-color: #849897;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  border-top: 3px solid #849897;
+  border-left: 3px solid #849897;
+  border-right: 3px solid #b0c4c5;
+  border-bottom: 3px solid #b0c4c5;
+  font-size: 13px;
+}
+
+.homeImage {
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px #071313;
+}
+
+.selectScenario {
+  margin: 1px;
+}
+
+.selectDiv {
+  background-color: #3e5251;
+  width: 500px;
+  /* border-top: 3px solid #849897; */
+  border-left: 3px solid #849897;
+  border-right: 3px solid #b0c4c5;
+  border-bottom: 3px solid #b0c4c5;
+  text-shadow: 2px 2px #071313;
+}
+
+.homeHeader {
+  width: 492px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  /* margin: 15px 0 15px 0; */
+}
+
+.homeHeader:hover {
+  border-top: 2px solid #b0c4c5;
+  border-left: 2px solid #b0c4c5;
+  border-right: 2px solid #3e5251;
+  border-bottom: 2px solid #3e5251;
+}
+
+.themesAttractions {
+  width: 496px;
+  border: 2px solid #3e5251;
 }
 
