@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Theme from './Theme'
 
 const AttractionInfo = () => {
   let { attractionId } = useParams()
@@ -28,6 +29,8 @@ const AttractionInfo = () => {
     getAttractionInfo()
   }, [attractionId])
 
+  console.log(attractionInfo)
+
   return (
     <div className="attractionInfo">
       {attractionInfo ? (
@@ -38,7 +41,7 @@ const AttractionInfo = () => {
               alt={attractionInfo.name}
             ></img>
               <div className="attractionTheme">
-                {attractionInfo.theme}
+                {attractionInfo.theme.name} 
               </div>
             <div className="attractionDescription">
               <h5>{attractionInfo.description}</h5>
