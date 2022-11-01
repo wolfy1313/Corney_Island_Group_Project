@@ -6,7 +6,7 @@ const Attraction = (props) => {
             <img className="attractionImage" src={props.image} alt={props.name}></img>
           </div>
           <div className="attractionInfoWrapper">
-            <h1>{props.name}</h1>
+            <h1 className="attractionName">{props.name}</h1>
           </div>
         </div>
     </>
