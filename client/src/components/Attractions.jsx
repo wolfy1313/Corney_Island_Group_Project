@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Attraction from '../components/Attraction'
 
-const ViewAttractions = () => {
+const Attractions = () => {
   const [attractions, setAttractions] = useState([])
 
   let navigate = useNavigate()
@@ -43,4 +43,4 @@ const ViewAttractions = () => {
   )
 }
 
-export default ViewAttractions
+export default Attractions

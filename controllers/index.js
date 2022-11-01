@@ -67,7 +67,7 @@ const createAttraction = async (req, res) => {
 
 const getAllAttractions = async (req, res) => {
   try {
-    const attractions = await Attraction.find()
+    const attractions = await Attraction.find().populate('theme')
     return res.status(200).json({ attractions })
   } catch (error) {
     return res.status(500).send(error.message)
@@ -77,7 +77,7 @@ const getAllAttractions = async (req, res) => {
 const getAttractionById = async (req, res) => {
   try {
     const { id } = req.params
-    const attraction = await Attraction.findById(id)
+    const attraction = await Attraction.findById(id).populate('theme')
     if (attraction) {
       return res.status(200).json({ attraction })
     }
