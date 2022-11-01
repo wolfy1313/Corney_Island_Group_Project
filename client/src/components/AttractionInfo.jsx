@@ -16,10 +16,10 @@ const AttractionInfo = () => {
 
   let navigate = useNavigate()
 
-  // const deleteAttraction = async () => {
-  //   await axios.delete(`http://localhost:3001/attractions/${attractionId}`)
-  //   navigate(`/attractions`)
-  // }
+  const deleteAttraction = async () => {
+    await axios.delete(`http://localhost:3001/attractions/${attractionId}`)
+    navigate(`/attractions`)
+  }
 
   // const modifyAttraction = async () => {
   //   navigate(`/modifyattraction/${attractionId}`)
@@ -52,7 +52,7 @@ const AttractionInfo = () => {
               <div>
                 <section className="buttons">
                   <button className="deleteButton" 
-                  // onClick={deleteAttraction}
+                  onClick={deleteAttraction}
                   >
                     delete
                   </button>
