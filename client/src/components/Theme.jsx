@@ -7,7 +7,7 @@ const Theme = (props) => {
   const {id} = useParams()
   let navigate = useNavigate()
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     navigate (`http://localhost:3001/themes/${props.id}`)
   }
 
@@ -15,7 +15,6 @@ const Theme = (props) => {
     const getThemeById = async () => {
       const response = await axios.get(`http://localhost:3001/attractions/theme/${props.id}`)
       setSelectedAttractionByTheme(response.data)
-      
     }
     getThemeById()
   }, [id])
