@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
+import ThemeAttractions from './ThemeAttractions'
 
 const Theme = (props) => {
   const [selectedAttractionByTheme, setSelectedAttractionByTheme] = useState({})
@@ -8,13 +9,13 @@ const Theme = (props) => {
   let navigate = useNavigate()
 
   const handleClick = () => {
-    navigate (`http://localhost:3001/themes/${props.id}`)
+    navigate (`/themes/${props.id}`)
   }
 
   useEffect(() => {
     const getThemeById = async () => {
       const response = await axios.get(`http://localhost:3001/attractions/theme/${props.id}`)
-      setSelectedAttractionByTheme(response.data)
+      console.log(response.data)
     }
     getThemeById()
   }, [id])

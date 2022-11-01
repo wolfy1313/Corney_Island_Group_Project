@@ -5,7 +5,7 @@ import Attractions from './components/Attractions'
 import AttractionInfo from './components/AttractionInfo'
 import Themes from './components/Themes'
 import Home from './components/Home'
-import Theme from './components/Theme'
+import ThemeAttractions from './components/ThemeAttractions'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/attractions" element={<Attractions />} />
           <Route path="/themes" element={<Themes />} />
-          <Route path="/themes/:id" element={<Theme />} />
+          <Route path="/themes/:id" element={<ThemeAttractions />} />
           <Route
             path="/attractions/:attractionId"
             element={<AttractionInfo />}

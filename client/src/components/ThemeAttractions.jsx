@@ -1,18 +1,17 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
-import '../components/Attraction'
+import Attraction from './Attraction'
 
 const ThemeAttractions = () => {
   const [attractions, setAttractions] = useState([])
-
   let navigate = useNavigate()
-  let { attractionsId } = useParams()
-  // let { themeId } = useParams()
+  let { id } = useParams()
+
 
   const getThemeAttractions = async () => {
-    const response = await axios.get(`http://localhost:3001/attractions/`)
-    setAttractions(response.data.attractions)
+    const response = await axios.get(`http://localhost:3001/attractions/theme/${id}`)
+    setAttractions(response.data)
   }
 
   const viewAttraction = (id) => {
@@ -21,7 +20,7 @@ const ThemeAttractions = () => {
 
   useEffect(() => {
     getThemeAttractions()
-  }, [attractionsId])
+  }, [])
 
   return (
 <div className="attractionGrid">
@@ -35,7 +34,7 @@ const ThemeAttractions = () => {
               image={attraction.image}
               name={attraction.name}
               theme={attraction.theme}
-              onClick={viewAttraction}
+              // onClick={viewAttraction}
             />
           ))}
       </div>
