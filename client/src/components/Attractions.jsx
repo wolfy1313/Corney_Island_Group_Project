@@ -27,7 +27,7 @@ const Attractions = () => {
     <div className="attractionGrid">
       <div className="addAttraction">
         <div className="attractionHover">
-      <Link to='/create-attraction' className="addAttractionName">Add Attraction</Link>
+        <Link to='/create-attraction' className="addAttractionName">Add Attraction</Link>
       </div>
       </div>
       <div className="allAttractions">
