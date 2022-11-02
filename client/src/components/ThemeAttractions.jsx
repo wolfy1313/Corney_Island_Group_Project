@@ -10,7 +10,7 @@ const ThemeAttractions = () => {
 
 
   const getThemeAttractions = async () => {
-    const response = await axios.get(`http://localhost:3001/attractions/theme/${id}`)
+    const response = await axios.get(`/api/attractions/theme/${id}`)
     setAttractions(response.data)
   }
 

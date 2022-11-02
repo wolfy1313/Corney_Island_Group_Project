@@ -8,7 +8,7 @@ const AttractionInfo = () => {
   const [attractionInfo, setAttractionInfo] = useState(null)
 
   const getAttractionInfo = async () => {
-    const response = await axios.get(`http://localhost:3001/attractions/${attractionId}`)
+    const response = await axios.get(`/api/attractions/${attractionId}`)
 
     setAttractionInfo(response.data.attraction)
   }
@@ -16,7 +16,7 @@ const AttractionInfo = () => {
   let navigate = useNavigate()
 
   const deleteAttraction = async () => {
-    await axios.delete(`http://localhost:3001/attractions/${attractionId}`)
+    await axios.delete(`/api/attractions/${attractionId}`)
     navigate(`/attractions`)
   }
 

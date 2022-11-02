@@ -9,7 +9,7 @@ const AddAttraction = () => {
 
   const Themes = () => {
     const getThemes = async () => {
-      const response = await axios.get(`http://localhost:3001/themes`)
+      const response = await axios.get(`/api/themes`)
       setThemes(response.data.themes)
     }
     getThemes()
@@ -20,7 +20,7 @@ const AddAttraction = () => {
   }
   const handleSubmit = async (event)=>{
     event.preventDefault()
-    let createdAttrraction = await axios.post('http://localhost:3001/attractions', 
+    let createdAttrraction = await axios.post('/api/attractions', 
     formState)
     .then((response)=> {
       console.log(response)
