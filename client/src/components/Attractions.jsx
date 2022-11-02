@@ -12,7 +12,6 @@ const Attractions = () => {
   const getAttractions = async () => {
     const response = await axios.get(`/api/attractions`)
     setAttractions(response.data.attractions)
-    console.log(response.data.attractions)
   }
 
   const viewAttraction = (id) => {
