@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import Theme from './Theme'
+import ThemeAttractions from './ThemeAttractions'
 
-const AttractionInfo = () => {
+const AttractionInfo = (props) => {
   let { attractionId } = useParams()
 
   const [attractionInfo, setAttractionInfo] = useState(null)
@@ -21,15 +21,15 @@ const AttractionInfo = () => {
     navigate(`/attractions`)
   }
 
-  // const modifyAttraction = async () => {
-  //   navigate(`/modifyattraction/${attractionId}`)
-  // }
+
+  const viewTheme = () => {
+    navigate(`/themes/${attractionInfo.theme._id}`)
+  }
 
   useEffect(() => {
     getAttractionInfo()
   }, [attractionId])
 
-  console.log(attractionInfo)
 
   return (
     <div className="attractionInfo">
@@ -40,7 +40,8 @@ const AttractionInfo = () => {
               src={attractionInfo.image}
               alt={attractionInfo.name}
             ></img>
-              <div className="attractionTheme">
+              <div className="attractionTheme" onClick={viewTheme}>
+
                 {attractionInfo.theme.name} 
               </div>
             <div className="attractionDescription">
