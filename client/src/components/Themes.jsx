@@ -6,7 +6,7 @@ import Theme from '../components/Theme'
 const Themes = () => {
   const [themes, setThemes] = useState([])
   const getThemes = async () => {
-    const response = await axios.get(`http://localhost:3001/themes`)
+    const response = await axios.get(`/api/themes`)
     setThemes(response.data.themes)
   }
 
