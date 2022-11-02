@@ -35,26 +35,38 @@ const AddAttraction = () => {
     Themes()
   },[])
   return (
-    <div>
-      <h1>Add Attraction</h1>
+    <div className="attractionForm">
+      <h1 className="formTitle">Add Attraction</h1>
     <div className="addAttractionForm">
       <form className='form' onSubmit={handleSubmit}>
-      <label htmlFor="theme">theme</label>
+      <div className="formDiv">
+      <label htmlFor="theme" className="formHeader">Theme:</label>
       <select id = 'theme'onChange={handleChange}>
         <option value={null} defaultValue>PickTheme</option>
         {themes.map((theme)=>(
           <option value={theme._id} key={theme._id}>{theme.name}</option>
         ))}
       </select>
-      <label htmlFor="name">Name:</label>
+      </div>
+      <div className="formDiv">
+      <label htmlFor="name" className="formHeader">Name:</label>
       <input onChange={handleChange} type='text' value={formState.name} id='name'></input>
-      <label htmlFor="description">Description:</label>
-      <input onChange={handleChange} type='text' value={formState.description} id='description'></input>
-      <label htmlFor="type">Type:</label>
+      </div>
+      <div className="formDiv">
+      <label htmlFor="description" className="formHeader">Description:</label>
+      <textarea onChange={handleChange} type='text' value={formState.description} id='description'></textarea>
+      </div>
+      <div className="formDiv">
+      <label htmlFor="type" className="formHeader">Type:</label>
       <input onChange={handleChange} type='text' value={formState.type} id='type'></input>
-      <label htmlFor="image">Image:</label>
+      </div>
+      <div className="formDiv">
+      <label htmlFor="image" className="formHeader">Image:</label>
       <input onChange={handleChange} type='text' value={formState.image} id='image'></input>
-      <button type='submit'>Submit</button>
+      </div>
+      <div className="buttonDiv">
+      <button type='submit' className="submitButton">Submit</button>
+      </div>
       </form>
     </div>
     </div>

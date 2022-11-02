@@ -39,30 +39,61 @@ const AttractionInfo = () => {
               src={attractionInfo.image}
               alt={attractionInfo.name}
             ></img>
-              <div className="attractionTheme" onClick={viewTheme}>
-
-                {attractionInfo.theme.name} 
+              <div>
+                <div className="attractionInfoTag">
+                  Name
+                </div>
+                <div className="attractionInfoTag2">
+                {attractionInfo.name}
+                </div>
               </div>
+              <div>
+                <div className="attractionInfoTag">
+                  Location
+                </div>
+                <div className="attractionTheme" onClick={viewTheme}>
+                {attractionInfo.theme.name} 
+                </div>
+              </div>
+              <div>
+              <div className="attractionDescriptionTag">
+                  Description
+                </div>
             <div className="attractionDescription">
               <h5>{attractionInfo.description}</h5>
             </div>
+            </div>
+            <div>
+            <div className="attractionDescriptionTag">
+                  Type
+                </div>
             <div className="attractionType">
               {attractionInfo.type}
             </div>
+            </div>
+            <div className="actionsInfoTag">
+                  Actions
+                </div>
               <div>
-                <section className="buttons">
+              
+                <div className="buttons">
+                <section className="button">
                   <button className="deleteButton" 
                   onClick={deleteAttraction}
                   >
-                    delete
+                    Delete
                   </button>
                 </section>
-              </div>
+              </div>  
+              <div className="button">
+            <button className="backButton" onClick={() => navigate(-1)}>
+              Back
+            </button>
+            </div>
+            </div>
         </div>
       ) : null}
-      <button className="backButton" onClick={() => navigate(-1)}>
-        BACK
-      </button>
+      
     </div>
   )
 }
