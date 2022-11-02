@@ -10,7 +10,7 @@ const Attractions = () => {
   let { attractionsId } = useParams()
 
   const getAttractions = async () => {
-    const response = await axios.get(`http://localhost:3001/attractions`)
+    const response = await axios.get(`/api/attractions`)
     setAttractions(response.data.attractions)
     console.log(response.data.attractions)
   }
