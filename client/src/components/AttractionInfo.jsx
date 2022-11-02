@@ -57,11 +57,6 @@ const AttractionInfo = (props) => {
                   >
                     delete
                   </button>
-                  <button className="modificationButton" 
-                  // onClick={modifyAttraction}
-                  >
-                    modify
-                  </button>
                 </section>
               </div>
         </div>
