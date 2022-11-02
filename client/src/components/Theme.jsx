@@ -1,24 +1,12 @@
-import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import axios from 'axios'
-import ThemeAttractions from './ThemeAttractions'
+import { useNavigate } from 'react-router-dom'
 
 const Theme = (props) => {
-  const [selectedAttractionByTheme, setSelectedAttractionByTheme] = useState({})
-  const {id} = useParams()
   let navigate = useNavigate()
 
   const handleClick = () => {
     navigate (`/themes/${props.id}`)
   }
 
-  useEffect(() => {
-    const getThemeById = async () => {
-      const response = await axios.get(`http://localhost:3001/attractions/theme/${props.id}`)
-      console.log(response.data)
-    }
-    getThemeById()
-  }, [id])
 
   return (
     <>

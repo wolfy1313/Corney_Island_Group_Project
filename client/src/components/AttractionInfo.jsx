@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import ThemeAttractions from './ThemeAttractions'
 
-const AttractionInfo = (props) => {
+const AttractionInfo = () => {
   let { attractionId } = useParams()
 
   const [attractionInfo, setAttractionInfo] = useState(null)
