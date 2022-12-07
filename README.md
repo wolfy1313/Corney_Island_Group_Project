@@ -21,7 +21,7 @@ You will begin on the home page. Click on "Attractions" if you would wish to vie
 
 ## **_Heroku Link_**
 
-[Heroku Linj](https://corney-island2022.herokuapp.com/)
+[Heroku Link](https://corney-island2022.herokuapp.com/)
 
 ## **_Component Hierarchy Diagram Link_**
 
